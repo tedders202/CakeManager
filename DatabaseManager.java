@@ -10,7 +10,7 @@ public class DatabaseManager {
 	public DatabaseManager() throws ClassNotFoundException {
 		try {
     		Class.forName("com.mysql.cj.jdbc.Driver");
-    		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cake_orders", "root", "OracleD@t@:3");
+    		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cake_orders", "username", "password");
         } catch (SQLException e) {
         	Alert alert = AlertUtil.createAlert(AlertType.ERROR, "Connection Error", "I'm sorry but something went wrong with the connection. Please retry again later.");
         	alert.showAndWait();
